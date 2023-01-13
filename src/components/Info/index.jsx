@@ -6,33 +6,48 @@ import {
   DataInfoContainer
 } from './styles'
 
-import icon from '../../../10n@2x.png'
+import moment from 'moment';
 
-const Info = () => {
+
+const Info = ({weatherData}) => {
+  const weatherDataInfo = {
+    name: weatherData.name,
+    country: weatherData.sys?.country,
+    icon: weatherData.weather?.[0]?.icon,
+    temp: weatherData.main?.temp,
+    temp_min: weatherData.main?.temp_min,
+    temp_max: weatherData.main?.temp_max,
+    description: weatherData.weather?.[0]?.description,
+    humidity: weatherData.main?.humidity,
+    visibility: weatherData.visibility / 1000,
+    sunrise: weatherData.sys?.sunrise,
+    sunset: weatherData.sys?.sunset,
+  }
+
   return (
     <InfoCity>
         <CityNameAndIcon>
             <div className='city'>
-              <h2>Curitiba</h2>
-              <p>BR</p>
+              <h2>{weatherDataInfo.name}</h2>
+              <p>{weatherDataInfo.country}</p>
             </div>
             <ImgContainer>
-              <img src={icon} loading='lazy' />
+              <img src={`https://openweathermap.org/img/wn/${weatherDataInfo.icon}@2x.png`} loading='lazy' />
             </ImgContainer>
         </CityNameAndIcon>
         <TempContainer>
-          <h2>24<sup>ºC</sup></h2>
-          <p className='description'>Nublado</p>
+          <h2>{Math.round(weatherDataInfo.temp)}<sup>ºC</sup></h2>
+          <p className='description'>{weatherDataInfo.description}</p>
           <div>
-            <p className='min-max-temp'><strong>Min:</strong> 21<sup>ºC</sup></p>
-            <p className='min-max-temp'><strong>Max:</strong> 26<sup>ºC</sup></p>
+            <p className='min-max-temp'><strong>Min:</strong> {Math.round(weatherDataInfo.temp_min)}<sup>ºC</sup></p>
+            <p className='min-max-temp'><strong>Max:</strong> {Math.round(weatherDataInfo.temp_max)}<sup>ºC</sup></p>
           </div>         
         </TempContainer>
         <DataInfoContainer>
-          <p><strong>Humidade:</strong> 60 %</p>
-          <p><strong>Visibilidade:</strong> 10 Km</p>
-          <p><strong>Nascer do sol:</strong> 5:35 am</p>
-          <p><strong>Pôr do sol:</strong> 19:13 pm</p>
+          <p><strong>Humidade:</strong> {weatherDataInfo.humidity} %</p>
+          <p><strong>Visibilidade:</strong> {weatherDataInfo.visibility.toFixed(1)} Km</p>
+          <p><strong>Nascer do sol:</strong> {moment(weatherDataInfo.sunrise, 'X').format('LT')}</p>
+          <p><strong>Pôr do sol:</strong> {moment(weatherDataInfo.sunset, 'X').format('LT')}</p>
         </DataInfoContainer>
     </InfoCity>
   )

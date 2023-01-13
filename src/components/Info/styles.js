@@ -103,6 +103,8 @@ export const TempContainer = styled.div`
     .description {
         font-weight: 600;
         font-size: 2.25rem;
+        max-width: 100%;
+        text-transform: capitalize;
     }
     .min-max-temp {
         font-size: 1.5rem;

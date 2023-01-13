@@ -6,14 +6,15 @@ export const WeatherContainer = styled.main`
     justify-content: center;
     flex-direction: column;
     width: 100vw;
+    max-width: 100%;
     height: auto;
     min-height: 100vh;
     h1 {
         max-width: 90%;
         font-size: 3rem;
         font-weight: 700;
-        margin-bottom: 2.25rem;
-        margin-top: 2.25rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
     }
 `
 
@@ -25,7 +26,7 @@ export const WeatherWrapper = styled.div`
     max-width: 90%;
     flex-wrap: wrap-reverse;
     min-height: 600px;
-    margin-bottom: 2.23rem;
+    margin-bottom: 2rem;
     @media (max-width: 1112px) {
         width: 500px;
     }
