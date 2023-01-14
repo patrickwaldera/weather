@@ -16,6 +16,9 @@ export const LoadingContainer = styled.div `
         font-weight: 500px;
         text-align: center;
         max-width: 80%;
+        @media (max-width: 600px) {
+            font-size: 2rem;
+        }
     }
     .loader {
         width: 48px;

@@ -20,7 +20,6 @@ const App = () => {
     .then(result => {
       setData(result)
       setSearch('');
-      console.log(result);
       setLoading(false);
     });
   }

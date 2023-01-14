@@ -16,5 +16,8 @@ export const ErrorContainer = styled.div `
         font-weight: 500px;
         text-align: center;
         max-width: 80%;
+        @media (max-width: 600px) {
+            font-size: 2rem;
+        }
     }
 `

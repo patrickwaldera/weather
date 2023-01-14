@@ -15,6 +15,9 @@ export const InfoCity = styled.div`
         }
         font-size: 1.5rem;
         margin: 4px 0;
+        @media (max-width: 600px) {
+            font-size: 1rem;
+        }
     }
 `
 
@@ -35,15 +38,22 @@ export const CityNameAndIcon = styled.div`
         font-weight: 600;
         font-size: 3rem;
         text-overflow: ellipsis;
-        overflow: hidden; 
+        overflow: hidden;
+        @media (max-width: 600px) {
+            font-size: 2.5rem;
+        }
     }
 
     p {
         font-weight: 500;
         font-size: 2.25rem;
+        @media (max-width: 600px) {
+            font-size: 1.25rem;
+        }
     }
 
     @media (max-width: 600px) {
+        flex-direction: column-reverse;
         justify-content: center;
     }
 
@@ -83,9 +93,6 @@ export const TempContainer = styled.div`
         margin-top: 24px;
         flex-wrap: wrap;
         max-width: 80%;
-        @media (max-width: 412px) {
-            justify-content: center;
-        }
         sup {
             font-size: 1rem;
             vertical-align: text-top;
@@ -98,6 +105,12 @@ export const TempContainer = styled.div`
         sup {
             font-size: 3.5rem;
             vertical-align: text-top;
+            @media (max-width: 600px) {
+                font-size: 2.5rem;
+            }
+        }
+        @media (max-width: 600px) {
+            font-size: 3.75rem;
         }
     }
     .description {
@@ -105,9 +118,15 @@ export const TempContainer = styled.div`
         font-size: 2.25rem;
         max-width: 100%;
         text-transform: capitalize;
+        @media (max-width: 600px) {
+            font-size: 1.25rem;
+        }
     }
     .min-max-temp {
         font-size: 1.5rem;
+        @media (max-width: 600px) {
+            font-size: 1rem;
+        }
     }
 `
 
