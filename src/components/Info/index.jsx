@@ -44,7 +44,7 @@ const Info = ({weatherData}) => {
           </div>         
         </TempContainer>
         <DataInfoContainer>
-          <p><strong>Humidade:</strong> {weatherDataInfo.humidity} %</p>
+          <p><strong>Umidade:</strong> {weatherDataInfo.humidity} %</p>
           <p><strong>Visibilidade:</strong> {weatherDataInfo.visibility.toFixed(1)} Km</p>
           <p><strong>Nascer do sol:</strong> {moment(weatherDataInfo.sunrise, 'X').format('LT')}</p>
           <p><strong>Pôr do sol:</strong> {moment(weatherDataInfo.sunset, 'X').format('LT')}</p>
