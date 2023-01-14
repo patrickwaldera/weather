@@ -9,5 +9,5 @@ Este projeto teve como principal objetivo colocar em prática os conhecimento em
 
 <!-- Markdown link & img dfn's -->
 
-[header-url]: weatherPrint.jpg
+[header-url]: weather.jpg
 [header-link]: https://weather-pw.vercel.app/
