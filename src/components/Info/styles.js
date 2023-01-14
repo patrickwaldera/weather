@@ -65,6 +65,8 @@ export const ImgContainer = styled.div`
     max-width: 80px;
     max-height: 80px;
     background: linear-gradient(34.78deg, #607D8B 0%, #90A4AE 100%);
+    opacity: 0.7;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
     border-radius: 16px;
     position: relative;
     img {

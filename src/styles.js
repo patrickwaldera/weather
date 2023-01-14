@@ -15,6 +15,11 @@ export const WeatherContainer = styled.main`
         font-weight: 700;
         margin-bottom: 2rem;
         margin-top: 2rem;
+        background: linear-gradient(34.78deg, #00A1FF 0%, #00FF8F 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
     }
 `
 

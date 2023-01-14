@@ -4,7 +4,7 @@ export const SearchBox = styled.div`
     width: 500px;
     max-width: 500px;
     min-height: 100px;
-    background: linear-gradient(34.78deg, #607D8B 0%, #90A4AE 100%);
+    background: linear-gradient(34.78deg, #00A1FF 0%, #00FF8F 100%);
     box-shadow: 10px 0px 25px rgba(0, 0, 0, 0.15);
     border-radius: 16px;
     display: flex;
